@@ -14,9 +14,10 @@ function crearPendiente() {
     var pendientes = document.getElementById("pendientes");
     var pendienteCreado = document.createElement("li");
     pendienteCreado.id = "nuevoPendiente";
-    pendienteCreado.innerHTML = document.getElementById("pendienteUsuario").value;
+    var pendientesUsuario = document.getElementById("pendienteUsuario");
+    pendienteCreado.innerHTML = pendientesUsuario.value;
     pendientes.appendChild(pendienteCreado);
-    console.log(pendienteCreado);
+    pendientesUsuario. value = " ";
 }
     
    /* var titulo = document.createTextNode(tiutloLista);
