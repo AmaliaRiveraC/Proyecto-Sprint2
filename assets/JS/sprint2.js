@@ -2,15 +2,19 @@
 
 function crearLista() {
     /*Esta funcion crea una nueva lista otorgandole al tiutlo el valor que el usuario a ingresado*/
-    /*var listaPendientes = document.getElementById("listaPendientes");
+    var listaPendientes = document.getElementById("listaPendientes");
     var listaCreada = document.createElement("ul");
     listaCreada.id = "nuevaLista";
     listaCreada = document.getElementById("nombreLista");
-    listaCreada.innerHTML = document.getElementById("listaUsuario").value;
-    listaPendientes.appendChild(listaCreada);*/
-    var listaNodo = document.getElementById("listaPendientes");
+    var listaUsuario = document.getElementById("listaUsuario");
+    listaCreada.innerHTML = listaUsuario.value + " " + "<span onclick='eliminar(this)'>X </span>";
+    listaPendientes.appendChild(listaCreada);
+    listaUsuario.value = " ";
+    console.log(listaCreada);
+    
+    /*var listaNodo = document.getElementById("listaPendientes");
     var nuevaLista = listaNodo.cloneNode(true);
-    nuevaLista = document.getElementById("nombreLista");
+    nuevaLista = document.getElementById("nuevasListas");
     var listaUsuario = document.getElementById("listaUsuario");
     nuevaLista.innerHTML = listaUsuario.value;
     listaNodo.appendChild(nuevaLista);
@@ -19,11 +23,11 @@ function crearLista() {
     console.log(listaNodo);
     listaUsuario.value = " ";
     
-    console.log(nuevaLista);
+    console.log(nuevaLista);*/
 }
 
 function crearPendiente() {
-    //Esta funcion crea un nuevo pendiente dentro de nuestra lista
+    //Esta funcion crea un nuevo pendiente dentro de nuestra lista 
     var pendientes = document.getElementById("pendientes");
     var pendienteCreado = document.createElement("li");
     pendienteCreado.id = "nuevoPendiente";
@@ -34,7 +38,7 @@ function crearPendiente() {
 }
     
 function eliminar(elemento) {
-    /*Esta funcion consigue eliminar los pendientes de manera independiente*/
+    /*Esta funcion consigue eliminar los pendientes de manera independiente y tambien elimina la lista*/
     var id=elemento.parentNode.getAttribute("id");
     node=document.getElementById(id);
     node.parentNode.removeChild(node);
