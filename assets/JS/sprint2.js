@@ -40,8 +40,5 @@ function eliminar(elemento) {
     node.parentNode.removeChild(node);
 }
 
-function Lista = {
-    this.titulo = titulo;
-    this.input = document.getElementById("pendienteUsuario");
-}
+
 
