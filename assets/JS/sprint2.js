@@ -8,7 +8,15 @@ function crearLista() {
     listaCreada = document.getElementById("nombreLista");
     listaCreada.innerHTML = document.getElementById("listaUsuario").value;
     listaPendientes.appendChild(listaCreada);
-    console.log(listaCreada);
+}
+
+function crearPendiente() {
+    var pendientes = document.getElementById("pendientes");
+    var pendienteCreado = document.createElement("li");
+    pendienteCreado.id = "nuevoPendiente";
+    pendienteCreado.innerHTML = document.getElementById("pendienteUsuario").value;
+    pendientes.appendChild(pendienteCreado);
+    console.log(pendienteCreado);
 }
     
    /* var titulo = document.createTextNode(tiutloLista);
@@ -20,11 +28,7 @@ function crearLista() {
     console.log(listaCreada);
 
 
-function crearPendiente() {
-    var pendiente = document.getElementById("pendienteUsuario").value;
-    var crearPendiente = document.createElement("li");
-    
-}
+
 function crearTitulo() {
     /*Esta funcion pretende tomar el valor del input donde se debria ingresar el titulo de la lista. Y crear un elemento lista utilizando dicho valor
     var espacioTitulo = document.getElementById("nombreLista");

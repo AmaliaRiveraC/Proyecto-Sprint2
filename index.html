@@ -11,12 +11,12 @@
         <section>
             <input id="listaUsuario" placeholder="Ingresa un titulo de lista">
             <button id="crearLista" onclick="crearLista()">Crear lista</button>
+            <h3 id="nombreLista" onclick="crearTitulo()"></h3>
             <ul id="listaPendientes" border="1px">
-                <h3 id="nombreLista" onclick="crearTitulo()"></h3>
                 <li type="none" id="pendientes"></li>
-                <input id="pendienteUsuario" placeholder="Ingresa un pendiente">
-                <button id="crearPendiente" onclick="crearPendiente">Crear pendiente</button>
             </ul>
+            <input id="pendienteUsuario" placeholder="Ingresa un pendiente">
+            <button id="crearPendiente" onclick="crearPendiente()">Crear pendiente</button>
         </section>
         <script src="assets/JS/sprint2.js"></script>
     </body>
